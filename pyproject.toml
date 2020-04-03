@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "flipt-grpc-python"
+version = "0.1.0"
+description = ""
+authors = ["David Cramer <dcramer@gmail.com>"]
+license = "Apache-2.0"
+packages = [
+    { include = "flipt_pb2.py", from = "lib" },
+    { include = "flipt_pb2_grpc.py", from = "lib" }
+]
+
+[tool.poetry.dependencies]
+python = "^2.7"
+grpcio = "^1.28.1"
+grpcio-tools = "^1.28.1"
+protoc-gen-swagger = "^0.1.0"
+
+[build-system]
+requires = ["poetry>=1.0.5"]
+build-backend = "poetry.masonry.api"
